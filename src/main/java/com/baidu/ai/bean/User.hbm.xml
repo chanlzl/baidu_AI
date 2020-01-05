@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.baidu.ai.bean.User" table="user" schema="ai">
+        <id name="id" column="id"/>
+        <property name="userId" column="user_id"/>
+        <property name="accessToken" column="access_token"/>
+        <property name="left" column="left"/>
+        <property name="top" column="top"/>
+        <property name="width" column="width"/>
+        <property name="height" column="height"/>
+        <property name="rotation" column="rotation"/>
+        <property name="createTime" column="create_time"/>
+    </class>
+</hibernate-mapping>
