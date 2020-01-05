@@ -49,4 +49,18 @@ public class UserController {
         }
         return userService.delete(aiRequest);
     }
+
+
+
+    @RequestMapping(value = "/search",method = RequestMethod.POST)
+    @ResponseBody
+    public AIResponse faceSearch(@RequestBody AIRequest aiRequest){
+        logger.info("begin to search user face");
+        if (null == aiRequest || StringUtils.isEmpty(aiRequest.getGroupId())
+                || StringUtils.isEmpty(aiRequest.getImageType())
+                || StringUtils.isEmpty(aiRequest.getImage())){
+            return new AIResponse(StatusEnum.INPUT_PARAMETER_INVALID);
+        }
+        return null;
+    }
 }

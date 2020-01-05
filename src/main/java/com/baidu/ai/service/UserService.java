@@ -10,4 +10,6 @@ public interface UserService {
 
     @Transactional
     AIResponse delete(AIRequest aiRequest);
+
+    AIResponse faceSearch(AIRequest aiRequest);
 }
